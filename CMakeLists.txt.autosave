@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 2.8.3)
+project(offboard)
+find_package(catkin_simple REQUIRED)
+catkin_simple(ALL_DEPS_REQUIRED)
+add_definitions(-std=c++11)
+
+cs_add_executable(offb_node src/offb_node.cpp)
+cs_add_executable(simulation_mavros_interface src/simulation_mavros_interface_node.cpp)
+
+cs_install()
+cs_export()
